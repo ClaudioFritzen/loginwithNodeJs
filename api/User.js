@@ -34,6 +34,14 @@ router.post('/signup', (req, res) => {
             status: "FAILED",
             message: "Invalid date of birth entered"
         })
+
+        // validação da senha
+    } else if (passowrd.length < a) {
+        res.json({
+            status: "FAILED",
+            message: "Senha é muito curta!"
+        })
+
     }
 
 })
